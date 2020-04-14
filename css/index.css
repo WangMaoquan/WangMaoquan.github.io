@@ -84,11 +84,11 @@ hr:hover:before {
 }
 hr:before {
   position: absolute;
-  top: -10px;
+  top: -20px;
   left: 5%;
   z-index: 1;
   color: #49b1f5;
-  content: '\f0c4';
+  content: '\f21c';
   font-style: normal;
   font-variant: normal;
   font-size: 20px;
@@ -2414,8 +2414,7 @@ figure.gallery-group .gallery-group-name:after {
   position: relative;
   width: 100%;
   background-color: #49b1f5;
-  background-attachment: local;
-  background-position: center center;
+  background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
