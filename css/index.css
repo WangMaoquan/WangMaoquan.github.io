@@ -5478,9 +5478,22 @@ img {
   font-weight: 700;
   font-size: 20px;
 }
+.relatedPosts .relatedPosts_list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
 .relatedPosts .relatedPosts_item {
   position: relative;
-  float: left;
   overflow: hidden;
   margin: 5px;
   width: calc(100% / 3 - 10px);
@@ -5508,7 +5521,7 @@ img {
   -o-transition: all 0.6s;
   -ms-transition: all 0.6s;
   transition: all 0.6s;
-  object-fit: cover;
+  object-fit: fill;
 }
 .relatedPosts .relatedPosts_main {
   position: absolute;
