@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://myblog.decade.run/"/>
-  <updated>2020-06-08T03:04:50.677Z</updated>
+  <updated>2020-06-10T07:54:05.863Z</updated>
   <id>http://myblog.decade.run/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>heroku</title>
+    <link href="http://myblog.decade.run/2020/06/10/heroku/"/>
+    <id>http://myblog.decade.run/2020/06/10/heroku/</id>
+    <published>2020-06-10T07:22:44.000Z</published>
+    <updated>2020-06-10T07:54:05.863Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>最近太久没有搞vue了,然后又看见自己电脑之前angular时弄得网易云音乐的api, 于是有了想法….</strong></p><h2 id="最开始的想法-把api弄到自己的服务器上"><a href="#最开始的想法-把api弄到自己的服务器上" class="headerlink" title="最开始的想法 把api弄到自己的服务器上"></a>最开始的想法 把api弄到自己的服务器上</h2><ol><li>我的服务器是阿里的, 因为偷懒, 用了宝塔面板(用起来还是挺方便的)</li><li>点进我的面板… 找到文件,点击上传</li><li>然后解压.. 打开终端.. 进入文件 </li><li>npm i 拉完包后, npm run start 出现了一串我很开心的东西<br><img src="/" class="lazyload" data-src="/img/heroku/1.png"  alt="滴滴滴"><br>我以为好了, 但是访问不了</li><li>然后一上午到下午两点 都在百度 尝试 百度尝试之前游走</li><li>最后我进入到了我的小破站, 然后看见了一个heroku</li><li>不得不说, 那老师声音挺好听的…感谢一下<a href="https://www.bilibili.com/video/BV1xs411K7KC?t=673" target="_blank" rel="noopener">小破站链接</a></li></ol><h2 id="然后开始我的heroku"><a href="#然后开始我的heroku" class="headerlink" title="然后开始我的heroku"></a>然后开始我的heroku</h2><ol><li>首先是<a href="https://www.heroku.com/" target="_blank" rel="noopener">官网</a>注册 进不去啥的记得 番羽 土啬</li><li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs" target="_blank" rel="noopener">官方手册</a>来一波 我弄得node的</li><li>先下一个<a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up" target="_blank" rel="noopener">可视化工具</a> 我用的windows</li><li>然后 我用的cmd打开我的那个网易云api文件</li><li>运行heroku create xxx (xxx 是你创建的命名)</li><li>然后git push heroku master<br>讲道理 能成功的 然后报了个错<br><img src="/" class="lazyload" data-src="/img/heroku/heroku1.png"  alt="报错"></li><li>然后翻了下文档 我git也不很熟悉 以后补<br><img src="/" class="lazyload" data-src="/img/heroku/heroku2.png"  alt="解决"></li><li>然后成功<br><img src="/" class="lazyload" data-src="/img/heroku/heroku3.png"  alt="成功"></li><li>最后访问的那个是 你最开始执行heroku create 生成的两个东西 一个是你后面登陆的链接 一个是你仓库的</li></ol><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">heroku create xxx </span><br><span class="line">// 会生成 两个链接 第一链接是我们后面用的</span><br></pre></td></tr></table></figure><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git init </span><br><span class="line">heroku gitxxxxxxxx.git  // 这是我进入官网找到我创建的那个里面找到的</span><br></pre></td></tr></table></figure><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push heroku master</span><br></pre></td></tr></table></figure><p>最后访问那个网址!!!!</p><p><font color="red">我是肯定会部署到服务器上的, 一定的</font></p>]]></content>
+    
+    <summary type="html">
+    
+      因为自己太菜, 没有部署到自己的服务器上, 然后偶然看见heroku, 边开始试试
+    
+    </summary>
+    
+    
+    
+      <category term="heroku" scheme="http://myblog.decade.run/tags/heroku/"/>
+    
+  </entry>
   
   <entry>
     <title>笔记</title>
@@ -183,29 +204,6 @@
   </entry>
   
   <entry>
-    <title>数据结构与算法</title>
-    <link href="http://myblog.decade.run/2020/05/19/data-structure/"/>
-    <id>http://myblog.decade.run/2020/05/19/data-structure/</id>
-    <published>2020-05-18T22:34:48.000Z</published>
-    <updated>2020-05-19T21:58:58.407Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="简单的阐述下数据结构和算法"><a href="#简单的阐述下数据结构和算法" class="headerlink" title="简单的阐述下数据结构和算法"></a>简单的阐述下数据结构和算法</h3><ol><li>数据结构是计算机的基础, 算法是计算机科学</li><li>程序设计 = 数据结构 + 算法</li><li>“数据结构(data structure)是计算机中存储, 组织数据的方式. 通常情况下, 精心选择的数据结构可以带来最秀效率的算法” —–  维基百科</li><li>解决问题的的方法和步骤</li><li>数据结构是离不开算法的</li></ol><div class="note info">            <p>作为正在成长的前端小菜鸟, 自己还是希望在以后面试的时候, 问起这一块的时候自己还是能对答如流. </p>          </div><p>数据结构分为逻辑结构和物理结构</p><ol><li>逻辑结构: 是指数据对象中数据元素之间的相关关系<ol><li>集合结构: 集合中的元素除了同属于一个相同的集合以外, 没有任何关系</li><li>线性结构: 线性结构中数据元素之间是一对一的关系</li><li>树形结构: 数据元素之间存在一种一对多的层次关系</li><li>图形结构: 多对多的关系</li></ol></li><li>物理结构: 是指数据在计算机中的存储形式</li></ol><p>存储方式分为顺序存储和链式存储</p><ol><li>顺序存储: 是把数据元素存放在地址连续的存储单元里, 其数据间的逻辑关系和物理关系是一致的<br><img src="/" class="lazyload" data-src="/img/dsalg/1.png"  alt="顺序存储"></li><li>链式存储: 是把数据元素存放在任意的存储单元里<br><img src="/" class="lazyload" data-src="/img/dsalg/2.png"  alt="链式存储"></li></ol><p>线性结构和非线性结构</p><ol><li>线性结构: 一个有序数据元素的集合，其特点是数据元素之间存在一对一的线性关系</li><li>非线性结构: 各个数据元素不再保持在一个线性序列中，每个数据元素可能与零个或者多个其他数据元素发生联系</li></ol><h3 id="常见的数据结构"><a href="#常见的数据结构" class="headerlink" title="常见的数据结构"></a>常见的数据结构</h3><ol><li>数组(array)</li><li>链表(linked list)</li><li>栈(stack)</li><li>队列(queue)</li><li>散列表/哈希表(hash)</li><li>堆(heap)</li><li>图(graph)</li><li>数(tree)</li></ol><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p>首先我们得明确, javascript中的数组不是真正意义上的数组</p><p>常见语言的数组有以下两个特点: </p><ol><li>不能存放不同类型的数据</li><li>数组的容量不会自动改变</li></ol><div class="note info">            <p>首先数组的存储方式是顺序存储, 所以满足我上面解释的 数据的逻辑关系和物理关系是一致的. 所谓的逻辑关系我的理解就是: 假设当前元素的内存地址存放在0x0000 而且当前元素的大小是8bit, 所以它的下一个元素的内存地址就是0x0001 物理关系就是所有元素的大小都是一致的. </p>          </div><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 动态方式生成数组 这里的动态指的是数组长度 */</span></span><br><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>]; <span class="comment">// 这里的3可以改成4</span></span><br><span class="line"><span class="comment">/* 静态方式生成数组  这里指的是数组元素*/</span></span><br><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">int</span>[] arr1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">  静态方式生成数组, 系统会根据后面元素的个数自动计算数组长度 </span></span><br><span class="line"><span class="comment">  静态方式生成数组右边的中括号里面不能放数字</span></span><br><span class="line"><span class="comment">  静态方式省略格式创建数组, 不能先声明后赋值, 只能声明的同时赋值</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><p>因为数组的长度固定, 所以我们会在对数组进行删除和插入操作的时候会很麻烦:</p><ol><li>插入数据: 我们需要把插入位置后面的数据往后移</li><li>删除数据: 我们需要把被删除数据后面的数据往前移</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      大清早的学习
-    
-    </summary>
-    
-    
-    
-      <category term="learn" scheme="http://myblog.decade.run/tags/learn/"/>
-    
-      <category term="数据结构" scheme="http://myblog.decade.run/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
     <title>javascript执行上下文与执行栈</title>
     <link href="http://myblog.decade.run/2020/05/19/ds2/"/>
     <id>http://myblog.decade.run/2020/05/19/ds2/</id>
@@ -225,6 +223,29 @@
       <category term="learn" scheme="http://myblog.decade.run/tags/learn/"/>
     
       <category term="javascript" scheme="http://myblog.decade.run/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据结构与算法</title>
+    <link href="http://myblog.decade.run/2020/05/19/data-structure/"/>
+    <id>http://myblog.decade.run/2020/05/19/data-structure/</id>
+    <published>2020-05-18T22:34:48.000Z</published>
+    <updated>2020-05-19T21:58:58.407Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="简单的阐述下数据结构和算法"><a href="#简单的阐述下数据结构和算法" class="headerlink" title="简单的阐述下数据结构和算法"></a>简单的阐述下数据结构和算法</h3><ol><li>数据结构是计算机的基础, 算法是计算机科学</li><li>程序设计 = 数据结构 + 算法</li><li>“数据结构(data structure)是计算机中存储, 组织数据的方式. 通常情况下, 精心选择的数据结构可以带来最秀效率的算法” —–  维基百科</li><li>解决问题的的方法和步骤</li><li>数据结构是离不开算法的</li></ol><div class="note info">            <p>作为正在成长的前端小菜鸟, 自己还是希望在以后面试的时候, 问起这一块的时候自己还是能对答如流. </p>          </div><p>数据结构分为逻辑结构和物理结构</p><ol><li>逻辑结构: 是指数据对象中数据元素之间的相关关系<ol><li>集合结构: 集合中的元素除了同属于一个相同的集合以外, 没有任何关系</li><li>线性结构: 线性结构中数据元素之间是一对一的关系</li><li>树形结构: 数据元素之间存在一种一对多的层次关系</li><li>图形结构: 多对多的关系</li></ol></li><li>物理结构: 是指数据在计算机中的存储形式</li></ol><p>存储方式分为顺序存储和链式存储</p><ol><li>顺序存储: 是把数据元素存放在地址连续的存储单元里, 其数据间的逻辑关系和物理关系是一致的<br><img src="/" class="lazyload" data-src="/img/dsalg/1.png"  alt="顺序存储"></li><li>链式存储: 是把数据元素存放在任意的存储单元里<br><img src="/" class="lazyload" data-src="/img/dsalg/2.png"  alt="链式存储"></li></ol><p>线性结构和非线性结构</p><ol><li>线性结构: 一个有序数据元素的集合，其特点是数据元素之间存在一对一的线性关系</li><li>非线性结构: 各个数据元素不再保持在一个线性序列中，每个数据元素可能与零个或者多个其他数据元素发生联系</li></ol><h3 id="常见的数据结构"><a href="#常见的数据结构" class="headerlink" title="常见的数据结构"></a>常见的数据结构</h3><ol><li>数组(array)</li><li>链表(linked list)</li><li>栈(stack)</li><li>队列(queue)</li><li>散列表/哈希表(hash)</li><li>堆(heap)</li><li>图(graph)</li><li>数(tree)</li></ol><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p>首先我们得明确, javascript中的数组不是真正意义上的数组</p><p>常见语言的数组有以下两个特点: </p><ol><li>不能存放不同类型的数据</li><li>数组的容量不会自动改变</li></ol><div class="note info">            <p>首先数组的存储方式是顺序存储, 所以满足我上面解释的 数据的逻辑关系和物理关系是一致的. 所谓的逻辑关系我的理解就是: 假设当前元素的内存地址存放在0x0000 而且当前元素的大小是8bit, 所以它的下一个元素的内存地址就是0x0001 物理关系就是所有元素的大小都是一致的. </p>          </div><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 动态方式生成数组 这里的动态指的是数组长度 */</span></span><br><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>]; <span class="comment">// 这里的3可以改成4</span></span><br><span class="line"><span class="comment">/* 静态方式生成数组  这里指的是数组元素*/</span></span><br><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">int</span>[] arr1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">  静态方式生成数组, 系统会根据后面元素的个数自动计算数组长度 </span></span><br><span class="line"><span class="comment">  静态方式生成数组右边的中括号里面不能放数字</span></span><br><span class="line"><span class="comment">  静态方式省略格式创建数组, 不能先声明后赋值, 只能声明的同时赋值</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><p>因为数组的长度固定, 所以我们会在对数组进行删除和插入操作的时候会很麻烦:</p><ol><li>插入数据: 我们需要把插入位置后面的数据往后移</li><li>删除数据: 我们需要把被删除数据后面的数据往前移</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      大清早的学习
+    
+    </summary>
+    
+    
+    
+      <category term="learn" scheme="http://myblog.decade.run/tags/learn/"/>
+    
+      <category term="数据结构" scheme="http://myblog.decade.run/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
