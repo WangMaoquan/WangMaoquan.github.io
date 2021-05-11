@@ -1,90 +1,147 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>王小明</title><meta name="description" content="博客,记录,生活,学习,成长"><meta name="keywords" content="web"><meta name="author" content="Decade W"><meta name="copyright" content="Decade W"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><meta name="twitter:card" content="summary"><meta name="twitter:title" content="王小明"><meta name="twitter:description" content="博客,记录,生活,学习,成长"><meta name="twitter:image" content="http://blog.decade.run/img/avatar.jpg"><meta property="og:type" content="website"><meta property="og:title" content="王小明"><meta property="og:url" content="http://blog.decade.run/page/4/"><meta property="og:site_name" content="王小明"><meta property="og:description" content="博客,记录,生活,学习,成长"><meta property="og:image" content="http://blog.decade.run/img/avatar.jpg"><meta property="article:published_time" content="2021-05-11T08:28:41.135Z"><meta property="article:modified_time" content="2021-05-11T08:28:41.135Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
-var t = Cookies.get("theme")
-if (autoChangeMode == '1'){
-  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
-  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
-  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
-  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
-
-  if (t === undefined){
-    if (isLightMode) activateLightMode()
-    else if (isDarkMode) activateDarkMode()
-    else if (isNotSpecified || hasNoSupport){
-      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
-      var now = new Date()
-      var hour = now.getHours()
-      var isNight = hour < 6 || hour >= 18
-      isNight ? activateDarkMode() : activateLightMode()
-  }
-  } else if (t == 'light') activateLightMode()
-  else activateDarkMode()
-
-} else if (autoChangeMode == '2'){
-  now = new Date();
-  hour = now.getHours();
-  isNight = hour < 6 || hour >= 18
-  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
-  else if (t === 'light') activateLightMode()
-  else activateDarkMode() 
-} else {
-  if ( t == 'dark' ) activateDarkMode()
-  else if ( t == 'light') activateLightMode()
-}
-
-function activateDarkMode(){
-  document.documentElement.setAttribute('data-theme', 'dark')
-  if (document.querySelector('meta[name="theme-color"]') !== null){
-    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
-  }
-}
-function activateLightMode(){
-  document.documentElement.setAttribute('data-theme', 'light')
-  if (document.querySelector('meta[name="theme-color"]') !== null){
-  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
-  }
-}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://blog.decade.run/page/4/"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.css"><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.js" defer></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>王小明</title><meta name="keywords" content="web"><meta name="author" content="Decade W"><meta name="copyright" content="Decade W"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="博客,记录,生活,学习,成长">
+<meta property="og:type" content="website">
+<meta property="og:title" content="王小明">
+<meta property="og:url" content="http://blog.decade.run/page/4/index.html">
+<meta property="og:site_name" content="王小明">
+<meta property="og:description" content="博客,记录,生活,学习,成长">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://blog.decade.run/img/avatar.jpg">
+<meta property="article:author" content="Decade W">
+<meta property="article:tag" content="web">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://blog.decade.run/img/avatar.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://blog.decade.run/page/4/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
-  algolia: {"appId":"LEP83554SS","apiKey":"96fa18c62f7619e2bf35df83ba4aef39","indexName":"...","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容:${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  algolia: undefined,
   localSearch: undefined,
-  translate: {"defaultEncoding":0,"translateDelay":1,"cookieDomain":"https://blog.decade.run/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
   copy: {
     success: '复制成功',
     error: '复制错误',
     noSupport: '浏览器不支持'
   },
-  bookmark: {
-    message_prev: '按',
-    message_next: '键将本页加入书签'
+  relativeDate: {
+    homepage: false,
+    post: false
   },
-  runtime_unit: '天',
-  runtime: true,
-  copyright: {"languages":{"author":"作者: Decade W","link":"链接: ","source":"来源: 王小明","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
-  ClickShowText: {"text":"努力,学习","fontSize":"15px"},
-  medium_zoom: false,
-  fancybox: true,
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
   Snackbar: undefined,
-  baiduPush: false,
-  highlightCopy: true,
-  highlightLang: true,
-  highlightShrink: 'false',
-  isFontAwesomeV5: false,
-  isPhotoFigcaption: true
-  
-}</script><script>var GLOBAL_CONFIG_SITE = { 
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '王小明',
   isPost: false,
   isHome: true,
-  isSidebar: false  
-  }</script><noscript><style>
-#page-header {
-  opacity: 1
-}
-.justified-gallery img{
-  opacity: 1
-}
-</style></noscript><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="王小明" type="application/atom+xml">
-</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">55</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">17</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item Home"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item Archives"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item Tag"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tag</span></a></div><div class="menus_item Categories"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item Link"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item About"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><div class="full_page" id="nav" style="background-image: url(/img/topbanner/1.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">王小明</a></span><span class="pull_right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item Home"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item Archives"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item Tag"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tag</span></a></div><div class="menus_item Categories"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item Link"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item About"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="site-info"><h1 id="site_title">王小明</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/WangMaoquan" target="_blank" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a><a class="social-icon" href="shixindonga@gmail.com" target="_blank" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i></a></div></div><div id="scroll_down"><i class="fa fa-angle-down scroll-down-effects"></i></div></div><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/09/02/hook-in-vue3-0-1/" title="hook in vue3.0">     <img class="post_bg lazyload" data-src="/img/coverimg/vue.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hook in vue3.0"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/09/02/hook-in-vue3-0-1/" title="hook in vue3.0">hook in vue3.0</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-09-02 05:01:18"><i class="fa fa-calendar" aria-hidden="true"></i>2020-09-02</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/learn/">learn</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/vue/">vue</a></span></div><div class="content">如何在vue3.0版本中优雅的使用react  context
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-05-11 18:26:19'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="王小明" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">55</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tag</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/topbanner/1.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">王小明</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tag</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">王小明</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/WangMaoquan" target="_blank" title="Github"><i class="fa fa-github"></i></a><a class="social-icon" href="/shixindonga@gmail.com" target="_blank" title="Email"><i class="fa fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/09/02/hook-in-vue3-0-1/" title="hook in vue3.0">     <img class="post_bg" src="/img/coverimg/vue.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hook in vue3.0"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/09/02/hook-in-vue3-0-1/" title="hook in vue3.0">hook in vue3.0</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-09-01T21:01:18.000Z" title="发表于 2020-09-02 05:01:18">2020-09-02</time></span></div><div class="content">如何在vue3.0版本中优雅的使用react  context
 目录结构: 
-vue-hook-ts├── public│   ├── favicon.ico│   └── index.html├── ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/09/01/lodash6/" title="lodash6">     <img class="post_bg lazyload" data-src="/img/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="lodash6"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/09/01/lodash6/" title="lodash6">lodash6</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-09-01 05:45:46"><i class="fa fa-calendar" aria-hidden="true"></i>2020-09-01</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/learn/">learn</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/loadsh/">loadsh</a></span></div><div class="content">今日任务
+vue-hook-ts├── public│   ├── favicon.ico│   └── index.html├── src│   ├── api│   │   └── index.ts│   ├── assets│   │   ├── styles│   │   └── harry.png│   ├── components│   │   ├── Book.vue│   │   ├── Books.vue│   │   └── StatusButtons.vue│   ├── context│   │   ├── BookContext.ts│   │   └── index.ts│   ├── data│   │   └── index.ts│   ├── hooks│   │   ├── index.ts│   │   ├── use-async.ts│   │   └── use-pages.ts│   ├── router│   │   └── index.ts│   ├── types│   ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/09/01/lodash6/" title="lodash6">     <img class="post_bg" src="/img/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="lodash6"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/09/01/lodash6/" title="lodash6">lodash6</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-08-31T21:45:46.000Z" title="发表于 2020-09-01 05:45:46">2020-09-01</time></span></div><div class="content">今日任务
 
  pull
  pullAll
@@ -93,7 +150,14 @@ vue-hook-ts├── public│   ├── favicon.ico│   └── index.html
  pullAt
 
 用法
-pull(array, [values])  移除数组array中所有和给定值相等的元 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/08/31/lodash5/" title="每日一读loadsh 源码">     <img class="post_bg lazyload" data-src="/img/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每日一读loadsh 源码"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/31/lodash5/" title="每日一读loadsh 源码">每日一读loadsh 源码</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-08-31 14:06:34"><i class="fa fa-calendar" aria-hidden="true"></i>2020-08-31</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/learn/">learn</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/loadsh/">loadsh</a></span></div><div class="content">今日任务
+pull(array, [values])  移除数组array中所有和给定值相等的元素 会改变原数组
+12345let arr = [1, 2, 3, 3, 2, 1];pull(arr, 2, 3); // [1, 1]console.log(arr) // [1, 1]
+
+pullAll(array, values) 这个方法接收一个要移除值的数组, 移除数组array中所有和给定数组values中相等的元素 会改变原数组
+12345let arr = [1, 2, 3, 1, 2 ,3]pullAll(arr, [2, 3]) // [1, 1]console.log(arr); // [1, 1]
+
+pullAllBy(array, values, iteratee)  这个方法接受一个 iteratee（迭代函数） 调用 array 和 values的每个值以产生一个值，通过产生的值进行了比较 也会改变原数组
+12345678910111213let arr = ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/08/31/lodash5/" title="每日一读loadsh 源码">     <img class="post_bg" src="/img/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每日一读loadsh 源码"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/31/lodash5/" title="每日一读loadsh 源码">每日一读loadsh 源码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-08-31T06:06:34.000Z" title="发表于 2020-08-31 14:06:34">2020-08-31</time></span></div><div class="content">今日任务
 
  fromEntries
  initial
@@ -102,10 +166,19 @@ pull(array, [values])  移除数组array中所有和给定值相等的元 ...</d
  intersectionWith
 
 用法
-fromEntries(pairs)   ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/08/29/vue3-0-compositionApi/" title="vue3.0 compositionApi">     <img class="post_bg lazyload" data-src="/img/coverimg/vue.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue3.0 compositionApi"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/29/vue3-0-compositionApi/" title="vue3.0 compositionApi">vue3.0 compositionApi</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-08-29 09:23:39"><i class="fa fa-calendar" aria-hidden="true"></i>2020-08-29</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/learn/">learn</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/vue/">vue</a></span></div><div class="content">vue-compositionApi响应式系统API 待补充相应例子
+fromEntries(pairs)  返回一个由pairs组成的键值对 对象
+123456const pairs = [  [&quot;a&quot;, 1],  [&quot;b&quot;, 2]];_.formEntries(pairs); // &#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: 2&#125;;
+
+initial(arr) 返回数组中除了最后一个元素的前面所有元素
+123const arr  = [1, 2, 3];_initail(arr); // [1, 2]
+
+intersection([arrays]) 返回给定数组的交集
+1234567const arrs = [  [1, 2],  [2, 3],  [2, 4]]_.intersection(...arrs); // [2]
+
+intersectionBy([arrays], [iteratee=_.ident ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/08/29/vue3-0-compositionApi/" title="vue3.0 compositionApi">     <img class="post_bg" src="/img/coverimg/vue.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue3.0 compositionApi"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/29/vue3-0-compositionApi/" title="vue3.0 compositionApi">vue3.0 compositionApi</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-08-29T01:23:39.000Z" title="发表于 2020-08-29 09:23:39">2020-08-29</time></span></div><div class="content">vue-compositionApi响应式系统API 待补充相应例子
 setup
 模板中使用
-1234567891011121314151617181920212223&lt;template&gt; ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/08/28/loadsh4/" title="每日一读loadsh 源码">     <img class="post_bg lazyload" data-src="/img/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每日一读loadsh 源码"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/28/loadsh4/" title="每日一读loadsh 源码">每日一读loadsh 源码</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-08-28 05:13:49"><i class="fa fa-calendar" aria-hidden="true"></i>2020-08-28</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/learn/">learn</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/loadsh/">loadsh</a></span></div><div class="content">
+1234567891011121314151617181920212223&lt;template&gt;	&lt;div&gt;        &#123;&#123; count &#125;&#125;        &#123;&#123; state.name &#125;&#125;    &lt;/div&gt;&lt;/template&gt;&lt;script&gt;import &#123; ref, reactive &#125; from &quot;@vue/composition-Api&quot;;export default &#123;    setup() &#123;        const count = ref(0);        const state = reactive(&#123;            name: &quot;Decade&quot;        &#125;)    &#125;    return &#123;   ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/08/28/loadsh4/" title="每日一读loadsh 源码">     <img class="post_bg" src="/img/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每日一读loadsh 源码"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/28/loadsh4/" title="每日一读loadsh 源码">每日一读loadsh 源码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-08-27T21:13:49.000Z" title="发表于 2020-08-28 05:13:49">2020-08-28</time></span></div><div class="content">
 今日任务
  flatten
  flattenDeep
@@ -115,7 +188,19 @@ setup
 
 
 flatten(array) 减少一级array深度
-1_.flatten([1, 2, 3, [4,  ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/08/27/loadsh3/" title="每日一读loadsh 源码">     <img class="post_bg lazyload" data-src="/img/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每日一读loadsh 源码"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/27/loadsh3/" title="每日一读loadsh 源码">每日一读loadsh 源码</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-08-27 04:55:49"><i class="fa fa-calendar" aria-hidden="true"></i>2020-08-27</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/learn/">learn</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/loadsh/">loadsh</a></span></div><div class="content">
+1_.flatten([1, 2, 3, [4, [5, 6]]]); =&gt; [1, 2, 3, 4, [5, 6]]
+
+flattenDeep(array) 将array递归为一维数组
+1_.flattenDeep([1, 2, 3, [4, [5, 6]]]) =&gt; [1, 2 ,3 ,4 ,5 ,6]
+
+flattenDepth(array, depth=1) 减少depth级深度
+1_.flattenDepth([1,2,3,[4, [5, [6]]]], 2); =&gt; [1, 2, 3,4, 5, [6]];
+
+
+
+笔记
+上面的三个方法最主要的区别就是调用baseFlatten传的参数不一样
+123456// flattenbaseFlatten(array, 1);// flattenDeepbaseFlatten(array, INFINITY);// flattenDepthbaseFlatten(arr ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/08/27/loadsh3/" title="每日一读loadsh 源码">     <img class="post_bg" src="/img/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每日一读loadsh 源码"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/27/loadsh3/" title="每日一读loadsh 源码">每日一读loadsh 源码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-08-26T20:55:49.000Z" title="发表于 2020-08-27 04:55:49">2020-08-27</time></span></div><div class="content">
 今日任务
  findIndex
  findLastIndex
@@ -125,7 +210,7 @@ flatten(array) 减少一级array深度
 
 
 用法
-findIndex(array, [predicate=_.identity], [fromI ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/08/24/loadsh2/" title="每日一读loadsh 源码">     <img class="post_bg lazyload" data-src="/img/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每日一读loadsh 源码"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/24/loadsh2/" title="每日一读loadsh 源码">每日一读loadsh 源码</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-08-24 04:55:49"><i class="fa fa-calendar" aria-hidden="true"></i>2020-08-24</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/learn/">learn</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/loadsh/">loadsh</a></span></div><div class="content">
+findIndex(array, [predicate=_.identity], [fromIndex=0])  从左往右 返回第一个通过 predicate 判断为真值的元素的索引值（index）  123456const users = [  &#123; &#x27;user&#x27;: &#x27;barney&#x27;,  &#x27;active&#x27;: false &#125;,  &#123; &#x27;user&#x27;: &#x27;fred&#x27;,    &#x27;active&#x27;: false &#125;,  &#123; &#x27;user&#x27;: &#x27;pebbles&#x27;, &#x27;active&#x27;: true &#125;];_.findIndex(users, (o) =&gt; &#123; return o.user == &#x27;barney&#x27;; &#125;);  ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/08/24/loadsh2/" title="每日一读loadsh 源码">     <img class="post_bg" src="/img/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每日一读loadsh 源码"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/24/loadsh2/" title="每日一读loadsh 源码">每日一读loadsh 源码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-08-23T20:55:49.000Z" title="发表于 2020-08-24 04:55:49">2020-08-24</time></span></div><div class="content">
 今日任务
  drop
  dropRight
@@ -135,7 +220,9 @@ findIndex(array, [predicate=_.identity], [fromI ...</div></div></div><div class=
 
 
 
-drop(array, [n=1]) 创建一个切片数组，去除array前面的n个元素。（ ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/08/20/loadsh1/" title="每日一读loadsh 源码">     <img class="post_bg lazyload" data-src="/img/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每日一读loadsh 源码"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/20/loadsh1/" title="每日一读loadsh 源码">每日一读loadsh 源码</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-08-20 04:55:49"><i class="fa fa-calendar" aria-hidden="true"></i>2020-08-20</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/learn/">learn</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/loadsh/">loadsh</a></span></div><div class="content">
+drop(array, [n=1]) 创建一个切片数组，去除array前面的n个元素。（n默认值为1。）返回的是剩下元素组成的数组  12let arr = [1, 2, 3]_.drop(arr, 1); =&gt; [2, 3]
+dropRight(array, [n=1]) 切去尾部的的n个元素 返回剩下元素组成的数组  12let arr = [1, 2, 3]_.dropRight(arr, 1); =&gt; [1, 2]
+dropRightWhile(array, [predicate=_.identity]) 第二个参数是一个迭代方法参数为(value, index, arr) 返回从假值开始到结尾  123456const users = [  &#123; &#x27;user&#x27;: &#x27;barney&#x27;,  &#x27;active&#x27;: false &#125;,  &#123; &#x27;user&#x27;: &# ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/08/20/loadsh1/" title="每日一读loadsh 源码">     <img class="post_bg" src="/img/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每日一读loadsh 源码"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/20/loadsh1/" title="每日一读loadsh 源码">每日一读loadsh 源码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-08-19T20:55:49.000Z" title="发表于 2020-08-20 04:55:49">2020-08-20</time></span></div><div class="content">
 今日任务
  chunk
  compact
@@ -146,20 +233,32 @@ drop(array, [n=1]) 创建一个切片数组，去除array前面的n个元素。�
 
 
 用法
-chunk(arr, size = 1) 传入一个数组, 传 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/28/vue-note3/" title="vue源码 之 虚拟DOM">     <img class="post_bg lazyload" data-src="/img/coverimg/vue.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue源码 之 虚拟DOM"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/28/vue-note3/" title="vue源码 之 虚拟DOM">vue源码 之 虚拟DOM</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-28 05:34:48"><i class="fa fa-calendar" aria-hidden="true"></i>2020-07-28</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/learn/">learn</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/vue/">vue</a></span></div><div class="content">首先文件目录是在src/core/vnode   没有备注的说明我自己还没有踩到
-vnode.js123456789101112131415161718192021222324252627282930 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/07/snabbdom04/" title="snabbdom源码解读">     <img class="post_bg lazyload" data-src="/img/snabbdom/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="snabbdom源码解读"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/07/snabbdom04/" title="snabbdom源码解读">snabbdom源码解读</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-07 00:30:10"><i class="fa fa-calendar" aria-hidden="true"></i>2020-07-07</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/learn/">learn</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/snabbdom/">snabbdom</a></span></div><div class="content">htmldomapi.ts这个文件里面的是dom操作的api
-123456789101112131415161718192021222324252627282930313233343536373839 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-fw fa-chevron-left" aria-hidden="true"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-fw fa-chevron-right" aria-hidden="true"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Decade W</div><div class="author-info__description">博客,记录,生活,学习,成长</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">55</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">17</div></a></div></div><div class="card-info-bookmark is-center"><a class="bookmark button--primary button--animated" id="bookmark-it" href="javascript:;" title="加入书签" target="_self"><i class="fa fa-bookmark" aria-hidden="true"></i><span>加入书签</span></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/WangMaoquan" target="_blank" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a><a class="social-icon" href="shixindonga@gmail.com" target="_blank" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fa fa-bullhorn card-announcement-animation" aria-hidden="true"></i><span>公告</span></div><div class="announcement_content">留言好像出了问题, 待解决!! 然后搜索那个是因为algolia长期没用, 把我之前创建的给我删了!!!</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fa fa-history" aria-hidden="true"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/2021/05/09/Vue-Router-api/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="/img/coverimg/vue.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="Vue-Router api" alt="Vue-Router api"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2021/05/09/Vue-Router-api/" title="Vue-Router api">Vue-Router api</div><time class="aside-post_meta post-meta__date" title="发表于 2021-05-09 20:33:58">2021-05-09</time></div></a></div><div class="aside-recent-post"><a href="/2021/04/28/vue3-%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB-%E4%B8%89/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="/img/coverimg/vue.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="vue3 源码阅读 watch" alt="vue3 源码阅读 watch"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2021/04/28/vue3-%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB-%E4%B8%89/" title="vue3 源码阅读 watch">vue3 源码阅读 watch</div><time class="aside-post_meta post-meta__date" title="发表于 2021-04-28 00:18:35">2021-04-28</time></div></a></div><div class="aside-recent-post"><a href="/2021/04/17/vue3-%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB-%E4%BA%8C/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="/img/coverimg/vue.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="vue3-源码阅读 reactive模块" alt="vue3-源码阅读 reactive模块"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2021/04/17/vue3-%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB-%E4%BA%8C/" title="vue3-源码阅读 reactive模块">vue3-源码阅读 reactive模块</div><time class="aside-post_meta post-meta__date" title="发表于 2021-04-17 00:32:50">2021-04-17</time></div></a></div><div class="aside-recent-post"><a href="/2021/04/09/vite-%E6%96%87%E6%A1%A3%E5%AD%A6%E4%B9%A0/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="/img/coverimg/vue.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="vite 文档学习" alt="vite 文档学习"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2021/04/09/vite-%E6%96%87%E6%A1%A3%E5%AD%A6%E4%B9%A0/" title="vite 文档学习">vite 文档学习</div><time class="aside-post_meta post-meta__date" title="发表于 2021-04-09 11:03:10">2021-04-09</time></div></a></div><div class="aside-recent-post"><a href="/2021/04/06/vue3-%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB-%E4%B8%80/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="/img/coverimg/vue.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="vue3 源码阅读 init to mount" alt="vue3 源码阅读 init to mount"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2021/04/06/vue3-%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB-%E4%B8%80/" title="vue3 源码阅读 init to mount">vue3 源码阅读 init to mount</div><time class="aside-post_meta post-meta__date" title="发表于 2021-04-06 15:50:56">2021-04-06</time></div></a></div></div></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fa fa-tags" aria-hidden="true"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Jest/" style="font-size: 17.14px; color: #999b9e">Jest</a> <a href="/tags/TypeScript/" style="font-size: 19.43px; color: #99a0a9">TypeScript</a> <a href="/tags/echarts/" style="font-size: 16px; color: #999">echarts</a> <a href="/tags/element-ui/" style="font-size: 18.29px; color: #999ea4">element-ui</a> <a href="/tags/heroku/" style="font-size: 16px; color: #999">heroku</a> <a href="/tags/hexo/" style="font-size: 16px; color: #999">hexo</a> <a href="/tags/javascript/" style="font-size: 16px; color: #999">javascript</a> <a href="/tags/js/" style="font-size: 16px; color: #999">js</a> <a href="/tags/learn/" style="font-size: 24px; color: #99a9bf">learn</a> <a href="/tags/loadsh/" style="font-size: 20.57px; color: #99a2af">loadsh</a> <a href="/tags/snabbdom/" style="font-size: 19.43px; color: #99a0a9">snabbdom</a> <a href="/tags/vite/" style="font-size: 16px; color: #999">vite</a> <a href="/tags/vue/" style="font-size: 22.86px; color: #99a7ba">vue</a> <a href="/tags/vueRouter/" style="font-size: 16px; color: #999">vueRouter</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 16px; color: #999">数据结构</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 18.29px; color: #999ea4">笔记</a> <a href="/tags/%E8%AF%BB%E5%90%8E%E7%AC%94%E8%AE%B0/" style="font-size: 21.71px; color: #99a4b4">读后笔记</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fa fa-archive" aria-hidden="true"></i><span>归档</span></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/"><span class="archive-list-date">2021 五月</span><span class="archive-list-count">1</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/"><span class="archive-list-date">2021 四月</span><span class="archive-list-count">4</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/"><span class="archive-list-date">2021 二月</span><span class="archive-list-count">4</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/"><span class="archive-list-date">2021 一月</span><span class="archive-list-count">2</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/"><span class="archive-list-date">2020 十二月</span><span class="archive-list-count">1</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/"><span class="archive-list-date">2020 十一月</span><span class="archive-list-count">5</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/"><span class="archive-list-date">2020 十月</span><span class="archive-list-count">4</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/"><span class="archive-list-date">2020 九月</span><span class="archive-list-count">11</span></a></li><li class="archive-list-item is-center"><a class="archive-list-link-more" href="/archives">查看更多</a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fa fa-line-chart" aria-hidden="true"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">55</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count" start_date="4/2/2020 00:00:00">     </div></div><div class="webinfo-item"><div class="webinfo-site-wordcount-name">本站总字数 :</div><div class="webinfo-site-wordcount">158.9k</div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Decade W</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text">Hi,  welcome  to  my  <a  href="http://blog.decade.run/">blog</a>!</div><div class="icp"><a href="http://beian.miit.gov.cn" target="_blank" rel="noopener"><img class="icp-icon" src="/img/icp.png"/><span>互联网ICP备案:渝ICP备19015868号</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">简</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><div class="search-dialog" id="algolia-search"><div class="search-dialog__title" id="algolia-search-title">Search</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script id="canvas_nest" color="106,90,205" opacity="0.7" zIndex="-1" count="199" mobile="false" src="/js/third-party/canvas-nest.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
-POWERMODE.shake = false;
-document.body.addEventListener('input', POWERMODE);
-</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/js/third-party/ClickShowText.js"></script><script src="/js/search/algolia.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var subtitleEffect = true
-if (subtitleEffect) { 
-  var typed = new Typed("#subtitle", {
-    strings: '你已经没有多少时间&#44;去挥霍,放纵,no time play,Talk is cheap Show me the code,能说算不上什么，有本事就把你的代码给我看看'.split(","),
-    startDelay: 300,
-    typeSpeed: 150,
-    loop: false,
-    backSpeed: 50
-  })
+chunk(arr, size = 1) 传入一个数组, 传入一个size 可以将数组分割成多个size或者不足size大小的数组, 最后将这些分割的数组 再包成数组返回 12_.chunk([1, 2, 3 ,4 ,5], 2) =&gt; [[1, 2], [3, 4], [5]]_.chunk([1, 2, 3 ,4], 2) =&gt; [[1, 2], [3, 4]]
+compact(array) 去除掉数组中的假值 “”, null, undefined, false,NaN 返回的是去掉假值后的数组 1_.compact([0, 1, false, 2, &#x27;&#x27;, 3]); =&gt; [0, 1, 2, 3]
+difference(array, [values]) 返回array与后面values除掉交集的部分 1_.difference([3, 2, 1], [4, 2]); =&gt; [3, 1];
+diff ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/28/vue-note3/" title="vue源码 之 虚拟DOM">     <img class="post_bg" src="/img/coverimg/vue.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue源码 之 虚拟DOM"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/28/vue-note3/" title="vue源码 之 虚拟DOM">vue源码 之 虚拟DOM</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-27T21:34:48.000Z" title="发表于 2020-07-28 05:34:48">2020-07-28</time></span></div><div class="content">首先文件目录是在src/core/vnode   没有备注的说明我自己还没有踩到
+vnode.js123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104export default class VNode &#123;  tag: string | void; // 标签名  data: VNodeData | void;  // VNodeData 在flow/vnode里面   children: ?Array&lt;VNode&gt;; // 子节点  text: string | void; // 文本  elm: Node | void; // 真实dom  ns: string | void; // 命名空间  context ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/07/snabbdom04/" title="snabbdom源码解读">     <img class="post_bg" src="/img/snabbdom/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="snabbdom源码解读"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/07/snabbdom04/" title="snabbdom源码解读">snabbdom源码解读</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-06T16:30:10.000Z" title="发表于 2020-07-07 00:30:10">2020-07-07</time></span></div><div class="content">htmldomapi.ts这个文件里面的是dom操作的api
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110export interface DOMAPI &#123;  createElement: (tagName: any) =&gt; HTMLElement  createElementNS: (namespaceURI: string, qualifiedName: string) =&gt; Element  createTextNode: (text: string) =&gt; Text  createComment: (text: string) =&gt; Comment   ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#content-inner">5</a><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/5/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Decade W</div><div class="author-info__description">博客,记录,生活,学习,成长</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">55</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a></div></div><a class="button--animated" id="card-info-btn" href="https://blog.decade.run/"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/WangMaoquan" target="_blank" title="Github"><i class="fa fa-github"></i></a><a class="social-icon" href="/shixindonga@gmail.com" target="_blank" title="Email"><i class="fa fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/05/09/Vue-Router-api/" title="Vue-Router api"><img src="/img/coverimg/vue.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vue-Router api"/></a><div class="content"><a class="title" href="/2021/05/09/Vue-Router-api/" title="Vue-Router api">Vue-Router api</a><time datetime="2021-05-09T12:33:58.000Z" title="发表于 2021-05-09 20:33:58">2021-05-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/28/vue3-%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB-%E4%B8%89/" title="vue3 源码阅读 watch"><img src="/img/coverimg/vue.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue3 源码阅读 watch"/></a><div class="content"><a class="title" href="/2021/04/28/vue3-%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB-%E4%B8%89/" title="vue3 源码阅读 watch">vue3 源码阅读 watch</a><time datetime="2021-04-27T16:18:35.000Z" title="发表于 2021-04-28 00:18:35">2021-04-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/17/vue3-%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB-%E4%BA%8C/" title="vue3-源码阅读 reactive模块"><img src="/img/coverimg/vue.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue3-源码阅读 reactive模块"/></a><div class="content"><a class="title" href="/2021/04/17/vue3-%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB-%E4%BA%8C/" title="vue3-源码阅读 reactive模块">vue3-源码阅读 reactive模块</a><time datetime="2021-04-16T16:32:50.000Z" title="发表于 2021-04-17 00:32:50">2021-04-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/09/vite-%E6%96%87%E6%A1%A3%E5%AD%A6%E4%B9%A0/" title="vite 文档学习"><img src="/img/coverimg/vue.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vite 文档学习"/></a><div class="content"><a class="title" href="/2021/04/09/vite-%E6%96%87%E6%A1%A3%E5%AD%A6%E4%B9%A0/" title="vite 文档学习">vite 文档学习</a><time datetime="2021-04-09T03:03:10.000Z" title="发表于 2021-04-09 11:03:10">2021-04-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/06/vue3-%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB-%E4%B8%80/" title="vue3 源码阅读 init to mount"><img src="/img/coverimg/vue.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue3 源码阅读 init to mount"/></a><div class="content"><a class="title" href="/2021/04/06/vue3-%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB-%E4%B8%80/" title="vue3 源码阅读 init to mount">vue3 源码阅读 init to mount</a><time datetime="2021-04-06T07:50:56.000Z" title="发表于 2021-04-06 15:50:56">2021-04-06</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/learn/" style="font-size: 1.45em; color: rgb(136, 159, 122)">learn</a><a href="/tags/hexo/" style="font-size: 1.15em; color: rgb(160, 183, 48)">hexo</a><a href="/tags/%E8%AF%BB%E5%90%8E%E7%AC%94%E8%AE%B0/" style="font-size: 1.36em; color: rgb(33, 137, 3)">读后笔记</a><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.15em; color: rgb(164, 131, 71)">数据结构</a><a href="/tags/javascript/" style="font-size: 1.15em; color: rgb(39, 45, 90)">javascript</a><a href="/tags/element-ui/" style="font-size: 1.24em; color: rgb(29, 121, 151)">element-ui</a><a href="/tags/heroku/" style="font-size: 1.15em; color: rgb(79, 89, 16)">heroku</a><a href="/tags/vue/" style="font-size: 1.41em; color: rgb(125, 1, 2)">vue</a><a href="/tags/Jest/" style="font-size: 1.19em; color: rgb(66, 138, 163)">Jest</a><a href="/tags/TypeScript/" style="font-size: 1.28em; color: rgb(44, 30, 105)">TypeScript</a><a href="/tags/loadsh/" style="font-size: 1.32em; color: rgb(72, 74, 48)">loadsh</a><a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 1.24em; color: rgb(123, 122, 179)">笔记</a><a href="/tags/echarts/" style="font-size: 1.15em; color: rgb(135, 44, 177)">echarts</a><a href="/tags/js/" style="font-size: 1.15em; color: rgb(171, 77, 157)">js</a><a href="/tags/snabbdom/" style="font-size: 1.28em; color: rgb(61, 183, 128)">snabbdom</a><a href="/tags/vueRouter/" style="font-size: 1.15em; color: rgb(116, 130, 66)">vueRouter</a><a href="/tags/vite/" style="font-size: 1.15em; color: rgb(183, 167, 29)">vite</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/05/"><span class="card-archive-list-date">五月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/10/"><span class="card-archive-list-date">十月 2020</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">11</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">55</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-05-11T10:26:18.781Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Decade W</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi,  welcome  to  my  <a  href="http://blog.decade.run/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "你已经没有多少时间&#44;去挥霍,放纵,no time play,Talk is cheap Show me the code,能说算不上什么，有本事就把你的代码给我看看".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: false,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '你已经没有多少时间&#44;去挥霍,放纵'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
 } else {
-  document.getElementById("subtitle").innerHTML = '你已经没有多少时间&#44;去挥霍,放纵'
-}</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script><div class="waifu"><div class="hide-button">隐藏</div><div class="waifu-tips"></div><canvas class="live2d" id="live2d" width="200" height="300"></canvas></div><script src="/lib/waifu-tips.js" async></script><script src="/lib/live2d.js"></script><script src="/lib/run.js"></script></body></html>
+  subtitleType()
+}</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/lib/autoload.js" async></script></body></html>
